@@ -8,6 +8,8 @@ df = pd.read_csv('./distro_output.csv')
 if len(sys.argv) == 2:
     column_name = sys.argv[1]
     column_titles = list(df.columns)
+    # These column names are used in the other program already for calculating
+    # the summary statistics.
     column_titles.remove("Earnings (USD)")
     column_titles.remove("Quantity")
     if column_name not in column_titles:
